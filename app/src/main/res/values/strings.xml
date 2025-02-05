@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">記帳小幫手</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="tab_bill">記帳紀錄</string>
+    <string name="tab_statistic">支出紀錄統計</string>
+    <string name="tab_receipt">發票紀錄</string>
+
+</resources>

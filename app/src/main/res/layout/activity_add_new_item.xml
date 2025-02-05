@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddNewItemActivity"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@drawable/background6">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/img_addNewItem_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/back_black"
+            android:layout_alignParentLeft="true"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/animalHouseTitle"
+            app:cardCornerRadius="20sp"
+            android:layout_centerInParent="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新增項目"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:paddingHorizontal="20sp"
+                android:paddingVertical="10dp"
+                android:fontFamily="@font/pop"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_addNewItem_income"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#D0D0D0">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="收入"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_addNewItem_expenditure"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#D0D0D0">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="支出"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:background="#ECFFFF">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="日期: "
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/txt_addNewItem_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="2024/09/13 "
+                android:textSize="20sp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:background="#ECFFFF">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="類型: "
+                android:textSize="20sp"/>
+
+            <Spinner
+                android:id="@+id/sp_addNewItem_spin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/spinnerValue"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="金額: "
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/edit_addNewItem_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="內容: "
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/edit_addNewItem_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_addNewItem_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerRadius="30dp"
+        android:height="50dp"
+        android:text="新增"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        app:backgroundTint="@color/button_orange"/>
+
+</LinearLayout>
